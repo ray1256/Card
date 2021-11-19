@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB87B0372746B5420088DD74 /* QRcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB87B0362746B5420088DD74 /* QRcodeViewController.swift */; };
+		EB87B03B2747948C0088DD74 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EB87B03A2747948C0088DD74 /* Alamofire */; };
 		EBDE1723274639AA00937C87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE1722274639AA00937C87 /* AppDelegate.swift */; };
 		EBDE1725274639AA00937C87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE1724274639AA00937C87 /* SceneDelegate.swift */; };
 		EBDE1727274639AA00937C87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE1726274639AA00937C87 /* ViewController.swift */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB87B0362746B5420088DD74 /* QRcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeViewController.swift; sourceTree = "<group>"; };
 		EBDE171F274639AA00937C87 /* AutoLayout Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AutoLayout Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDE1722274639AA00937C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBDE1724274639AA00937C87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB87B03B2747948C0088DD74 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 				EBDE1722274639AA00937C87 /* AppDelegate.swift */,
 				EBDE1724274639AA00937C87 /* SceneDelegate.swift */,
 				EBDE1726274639AA00937C87 /* ViewController.swift */,
+				EB87B0362746B5420088DD74 /* QRcodeViewController.swift */,
 				EBDE1728274639AA00937C87 /* Main.storyboard */,
 				EBDE172B274639AB00937C87 /* Assets.xcassets */,
 				EBDE172D274639AB00937C87 /* LaunchScreen.storyboard */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = "AutoLayout Practice";
+			packageProductDependencies = (
+				EB87B03A2747948C0088DD74 /* Alamofire */,
+			);
 			productName = "AutoLayout Practice";
 			productReference = EBDE171F274639AA00937C87 /* AutoLayout Practice.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +118,9 @@
 				Base,
 			);
 			mainGroup = EBDE1716274639AA00937C87;
+			packageReferences = (
+				EB87B0392747948C0088DD74 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = EBDE1720274639AA00937C87 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			files = (
 				EBDE1727274639AA00937C87 /* ViewController.swift in Sources */,
 				EBDE1723274639AA00937C87 /* AppDelegate.swift in Sources */,
+				EB87B0372746B5420088DD74 /* QRcodeViewController.swift in Sources */,
 				EBDE1725274639AA00937C87 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB87B0392747948C0088DD74 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB87B03A2747948C0088DD74 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB87B0392747948C0088DD74 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EBDE1717274639AA00937C87 /* Project object */;
 }
