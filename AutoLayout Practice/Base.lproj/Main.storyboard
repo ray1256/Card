@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,67 +33,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oie-i8-fwr">
-                                <rect key="frame" x="83" y="116" width="248" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B0L-RK-SaF">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="MLJ-uG-1NX"/>
+                                    <constraint firstAttribute="height" constant="250" id="niY-VM-4Us"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="aNP-95-Hlq" appends="YES" id="LWS-y4-7ET"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="輸入網址變成QRCode" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oie-i8-fwr">
+                                <rect key="frame" x="20" y="186" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Gtb-a8-gQs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B0L-RK-SaF">
-                                <rect key="frame" x="70" y="323" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96Y-br-Wf4">
-                                <rect key="frame" x="263" y="172" width="61" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Tran"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="JO4-cO-qEt">
+                                <rect key="frame" x="20" y="228" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPb-an-Kh3">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="30"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ClearButton:" destination="XBU-7z-OAw" eventType="touchUpInside" id="AWk-fz-pAF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96Y-br-Wf4">
+                                        <rect key="frame" x="202" y="0.0" width="172" height="30"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <state key="normal" title="Generate">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Generator:" destination="XBU-7z-OAw" eventType="touchUpInside" id="AqX-Pu-DTb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yr-Cm-mUw">
+                                <rect key="frame" x="20" y="652" width="374" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="儲存快速名片">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="perfomrButtonAction:" destination="XBU-7z-OAw" eventType="touchUpInside" id="XnP-ft-bqY"/>
+                                    <action selector="StoredCard:" destination="XBU-7z-OAw" eventType="touchUpInside" id="hfO-S8-OOI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jJ-MN-8nY">
-                                <rect key="frame" x="163" y="254" width="64" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Generate"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYy-iL-SQf">
+                                <rect key="frame" x="20" y="690" width="374" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="顯示快速名片">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Generater:" destination="XBU-7z-OAw" eventType="touchUpInside" id="H8c-kc-cS1"/>
+                                    <action selector="AppearCard:" destination="XBU-7z-OAw" eventType="touchUpInside" id="NtB-J5-t92"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oM-2e-9L3">
-                                <rect key="frame" x="130" y="628" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="imagepick:" destination="XBU-7z-OAw" eventType="touchUpInside" id="wrx-hb-hY1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2w-C3-X7e">
-                                <rect key="frame" x="244" y="628" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="tran"/>
-                                <connections>
-                                    <action selector="imageTran:" destination="XBU-7z-OAw" eventType="touchUpInside" id="E15-ai-Z6g"/>
-                                    <action selector="perfomrButtonAction:" destination="XBU-7z-OAw" eventType="touchUpInside" id="gw7-XF-Vb5"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EtB-K6-s2x">
-                                <rect key="frame" x="87" y="666" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9zA-Cz-vOV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92508524660000002" green="0.73764014239999998" blue="0.46256417039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9zA-Cz-vOV" firstAttribute="trailing" secondItem="JO4-cO-qEt" secondAttribute="trailing" constant="20" id="8ZY-Kg-tbb"/>
+                            <constraint firstItem="JO4-cO-qEt" firstAttribute="leading" secondItem="9zA-Cz-vOV" secondAttribute="leading" constant="20" id="9f0-wu-Bxd"/>
+                            <constraint firstItem="oie-i8-fwr" firstAttribute="leading" secondItem="9zA-Cz-vOV" secondAttribute="leading" constant="20" id="Eds-iF-3Uo"/>
+                            <constraint firstItem="5yr-Cm-mUw" firstAttribute="leading" secondItem="oie-i8-fwr" secondAttribute="leading" id="Koe-LY-UVT"/>
+                            <constraint firstItem="5yr-Cm-mUw" firstAttribute="trailing" secondItem="oie-i8-fwr" secondAttribute="trailing" id="Mg9-mQ-InA"/>
+                            <constraint firstItem="5yr-Cm-mUw" firstAttribute="top" secondItem="B0L-RK-SaF" secondAttribute="bottom" constant="79" id="Mw4-7T-ono"/>
+                            <constraint firstItem="JO4-cO-qEt" firstAttribute="top" secondItem="oie-i8-fwr" secondAttribute="bottom" constant="8" symbolic="YES" id="ZxH-uo-huE"/>
+                            <constraint firstItem="CYy-iL-SQf" firstAttribute="trailing" secondItem="5yr-Cm-mUw" secondAttribute="trailing" id="bdf-bR-VlP"/>
+                            <constraint firstItem="CYy-iL-SQf" firstAttribute="leading" secondItem="5yr-Cm-mUw" secondAttribute="leading" id="dkK-M1-XAQ"/>
+                            <constraint firstItem="oie-i8-fwr" firstAttribute="top" secondItem="9zA-Cz-vOV" secondAttribute="top" constant="46" id="mWE-Ip-LKn"/>
+                            <constraint firstItem="B0L-RK-SaF" firstAttribute="centerY" secondItem="Zfn-CR-j3M" secondAttribute="centerY" id="ots-7u-p0Z"/>
+                            <constraint firstItem="CYy-iL-SQf" firstAttribute="top" secondItem="5yr-Cm-mUw" secondAttribute="bottom" constant="8" symbolic="YES" id="pBy-yy-Ott"/>
+                            <constraint firstItem="9zA-Cz-vOV" firstAttribute="trailing" secondItem="oie-i8-fwr" secondAttribute="trailing" constant="20" id="s91-0o-ggO"/>
+                            <constraint firstItem="B0L-RK-SaF" firstAttribute="centerX" secondItem="Zfn-CR-j3M" secondAttribute="centerX" id="yNk-tZ-NhB"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="我的名片" image="person" catalog="system" id="wIP-Wf-xTO"/>
+                    <navigationItem key="navigationItem" title="我的名片" id="2p3-GG-AFa"/>
                     <connections>
                         <outlet property="imageView" destination="B0L-RK-SaF" id="ONL-mH-AFv"/>
-                        <outlet property="imagetran" destination="EtB-K6-s2x" id="Qp7-YS-wzm"/>
                         <outlet property="textfield" destination="oie-i8-fwr" id="m8n-aK-PV6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Tk-0w-VIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aNP-95-Hlq">
+                    <connections>
+                        <action selector="imageChange:" destination="XBU-7z-OAw" id="8At-Ag-Yvw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1634.7826086956522" y="841.74107142857144"/>
+            <point key="canvasLocation" x="2544.9275362318845" y="841.74107142857144"/>
         </scene>
         <!-- -->
         <scene sceneID="tne-QT-ifu">
@@ -370,12 +419,31 @@
                     <connections>
                         <segue destination="ZNM-Jd-JQD" kind="relationship" relationship="viewControllers" id="sHp-YM-C3k"/>
                         <segue destination="23w-jd-lQn" kind="relationship" relationship="viewControllers" id="amz-K4-Ujg"/>
-                        <segue destination="XBU-7z-OAw" kind="relationship" relationship="viewControllers" id="ClL-r9-dOe"/>
+                        <segue destination="mrA-cF-vdi" kind="relationship" relationship="viewControllers" id="ClL-r9-dOe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMN-5B-Qai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-184.05797101449278" y="118.52678571428571"/>
+        </scene>
+        <!--我的名片-->
+        <scene sceneID="Xp8-c0-EAP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mrA-cF-vdi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的名片" image="person" catalog="system" id="wIP-Wf-xTO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mhn-VA-rze">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XBU-7z-OAw" kind="relationship" relationship="rootViewController" id="SUf-PT-lC1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtf-do-Svm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1634.7826086956522" y="841.74107142857144"/>
         </scene>
     </scenes>
     <resources>
@@ -383,8 +451,10 @@
         <image name="259157F9-EEB6-446F-9F75-8BF9BAA0CCC3_1_105_c" width="886" height="886"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

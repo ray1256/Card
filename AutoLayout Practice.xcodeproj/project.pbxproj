@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EB87B0372746B5420088DD74 /* QRcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB87B0362746B5420088DD74 /* QRcodeViewController.swift */; };
 		EB87B03B2747948C0088DD74 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EB87B03A2747948C0088DD74 /* Alamofire */; };
+		EB87B03F2747B5B70088DD74 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = EB87B03E2747B5B70088DD74 /* JGProgressHUD */; };
 		EBDE1723274639AA00937C87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE1722274639AA00937C87 /* AppDelegate.swift */; };
 		EBDE1725274639AA00937C87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE1724274639AA00937C87 /* SceneDelegate.swift */; };
 		EBDE1727274639AA00937C87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDE1726274639AA00937C87 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB87B03F2747B5B70088DD74 /* JGProgressHUD in Frameworks */,
 				EB87B03B2747948C0088DD74 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +92,7 @@
 			name = "AutoLayout Practice";
 			packageProductDependencies = (
 				EB87B03A2747948C0088DD74 /* Alamofire */,
+				EB87B03E2747B5B70088DD74 /* JGProgressHUD */,
 			);
 			productName = "AutoLayout Practice";
 			productReference = EBDE171F274639AA00937C87 /* AutoLayout Practice.app */;
@@ -120,6 +123,7 @@
 			mainGroup = EBDE1716274639AA00937C87;
 			packageReferences = (
 				EB87B0392747948C0088DD74 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				EB87B03D2747B5B70088DD74 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = EBDE1720274639AA00937C87 /* Products */;
 			projectDirPath = "";
@@ -363,6 +367,14 @@
 				minimumVersion = 5.4.4;
 			};
 		};
+		EB87B03D2747B5B70088DD74 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -370,6 +382,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EB87B0392747948C0088DD74 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		EB87B03E2747B5B70088DD74 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB87B03D2747B5B70088DD74 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
