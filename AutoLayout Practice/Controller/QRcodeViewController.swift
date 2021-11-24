@@ -40,8 +40,25 @@ class QRcodeViewController: UIViewController,UINavigationControllerDelegate,UIIm
         super.viewDidLoad()
         imagePicker.delegate = self
         
+        
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        removeAll()
+        
+    }
+    
+    
+    func removeAll(){
+        print("Remove Start")
+        for i in 0...9{
+            let user = UserDefaults.standard
+            user.removeObject(forKey: "Favorite_\(i)")
+            print("Remove_\(i)")
+        }
+    }
     
    private func uploadImage(_ uiImage:UIImage){
         let headers:HTTPHeaders = ["Authorization":"Client-ID fa27789397234c4",]
@@ -74,13 +91,14 @@ class QRcodeViewController: UIViewController,UINavigationControllerDelegate,UIIm
     }
     @IBAction func AppearCard(_ sender: Any) {
         
-        if let storedData = UserDefaults.standard.data(forKey: "Stored") {
-            let image = UIImage(data: storedData)
-            imageView.image = image
-        }else{
-            print("還沒儲存過名片")
-        }
-       
+//        if let storedData = UserDefaults.standard.data(forKey: "Stored") {
+//            let image = UIImage(data: storedData)
+//            imageView.image = image
+//        }else{
+//            print("還沒儲存過名片")
+//        }
+        
+        Convert()
     }
     @IBAction func StoredCard(_ sender: Any) {
         let data = imageView.image?.pngData()
@@ -141,8 +159,17 @@ class QRcodeViewController: UIViewController,UINavigationControllerDelegate,UIIm
         
     }
     
-    
-    
-   
+    private func Convert(){
+        guard let storedData = UserDefaults.standard.data(forKey: "Stored"),let pickImage = UIImage(data: storedData),
+              let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh]),
+              let ciImage = CIImage(image: pickImage),
+              let features = detector.features(in: ciImage) as? [CIQRCodeFeature]
+        else{ return }
+        let StringValue = features.reduce(""){$0 + ($1.messageString ?? "")}
+        QRCodeGenerate(StringValue)
 
+    }
+        
 }
+    
+    

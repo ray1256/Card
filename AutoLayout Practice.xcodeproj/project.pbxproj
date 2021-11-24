@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB44C50A274928DE00709DFF /* AnimateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44C509274928DE00709DFF /* AnimateCollectionViewCell.swift */; };
+		EB44C50D27492C9F00709DFF /* AnimationCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44C50C27492C9F00709DFF /* AnimationCollectionLayout.swift */; };
+		EB44C51A274CB55800709DFF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44C519274CB55800709DFF /* Card.swift */; };
+		EB44C51D274CD92700709DFF /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44C51C274CD92700709DFF /* FavoriteTableViewController.swift */; };
+		EB44C521274CE2B600709DFF /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44C520274CE2B600709DFF /* FavoriteTableViewCell.swift */; };
+		EB44C52A274CEDED00709DFF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44C529274CEDED00709DFF /* CollectionViewController.swift */; };
+		EB44C530274E1F7C00709DFF /* addViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44C52F274E1F7C00709DFF /* addViewController.swift */; };
 		EB87B0372746B5420088DD74 /* QRcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB87B0362746B5420088DD74 /* QRcodeViewController.swift */; };
 		EB87B03B2747948C0088DD74 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EB87B03A2747948C0088DD74 /* Alamofire */; };
 		EB87B03F2747B5B70088DD74 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = EB87B03E2747B5B70088DD74 /* JGProgressHUD */; };
@@ -19,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB44C509274928DE00709DFF /* AnimateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB44C50C27492C9F00709DFF /* AnimationCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCollectionLayout.swift; sourceTree = "<group>"; };
+		EB44C519274CB55800709DFF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		EB44C51C274CD92700709DFF /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
+		EB44C520274CE2B600709DFF /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		EB44C529274CEDED00709DFF /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		EB44C52F274E1F7C00709DFF /* addViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addViewController.swift; sourceTree = "<group>"; };
 		EB87B0362746B5420088DD74 /* QRcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRcodeViewController.swift; sourceTree = "<group>"; };
 		EBDE171F274639AA00937C87 /* AutoLayout Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AutoLayout Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDE1722274639AA00937C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +57,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB44C523274CEC4100709DFF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB44C529274CEDED00709DFF /* CollectionViewController.swift */,
+				EB44C52F274E1F7C00709DFF /* addViewController.swift */,
+				EB44C51C274CD92700709DFF /* FavoriteTableViewController.swift */,
+				EB87B0362746B5420088DD74 /* QRcodeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB44C524274CEC5700709DFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB44C50C27492C9F00709DFF /* AnimationCollectionLayout.swift */,
+				EB44C525274CEC6200709DFF /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB44C525274CEC6200709DFF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB44C509274928DE00709DFF /* AnimateCollectionViewCell.swift */,
+				EB44C520274CE2B600709DFF /* FavoriteTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EB44C526274CEC7F00709DFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB44C519274CB55800709DFF /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EBDE1716274639AA00937C87 = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +116,10 @@
 				EBDE1722274639AA00937C87 /* AppDelegate.swift */,
 				EBDE1724274639AA00937C87 /* SceneDelegate.swift */,
 				EBDE1726274639AA00937C87 /* ViewController.swift */,
-				EB87B0362746B5420088DD74 /* QRcodeViewController.swift */,
 				EBDE1728274639AA00937C87 /* Main.storyboard */,
+				EB44C526274CEC7F00709DFF /* Model */,
+				EB44C524274CEC5700709DFF /* View */,
+				EB44C523274CEC4100709DFF /* Controller */,
 				EBDE172B274639AB00937C87 /* Assets.xcassets */,
 				EBDE172D274639AB00937C87 /* LaunchScreen.storyboard */,
 				EBDE1730274639AB00937C87 /* Info.plist */,
@@ -153,9 +206,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBDE1727274639AA00937C87 /* ViewController.swift in Sources */,
+				EB44C50A274928DE00709DFF /* AnimateCollectionViewCell.swift in Sources */,
 				EBDE1723274639AA00937C87 /* AppDelegate.swift in Sources */,
+				EB44C50D27492C9F00709DFF /* AnimationCollectionLayout.swift in Sources */,
+				EB44C51A274CB55800709DFF /* Card.swift in Sources */,
 				EB87B0372746B5420088DD74 /* QRcodeViewController.swift in Sources */,
 				EBDE1725274639AA00937C87 /* SceneDelegate.swift in Sources */,
+				EB44C51D274CD92700709DFF /* FavoriteTableViewController.swift in Sources */,
+				EB44C521274CE2B600709DFF /* FavoriteTableViewCell.swift in Sources */,
+				EB44C52A274CEDED00709DFF /* CollectionViewController.swift in Sources */,
+				EB44C530274E1F7C00709DFF /* addViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
