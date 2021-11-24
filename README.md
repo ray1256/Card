@@ -5,11 +5,13 @@ _
 <img src="https://i.imgur.com/LRRcVS3.jpg" width="200px" >
 <img src="https://i.imgur.com/y1HUenM.jpg" width="200px" >
 
+
 ### Gif
 <img src="https://i.imgur.com/JP2tFwn.gif" width="200px" >
 
 ## 新增新的卡片
-<img src="https://i.imgur.com/Am7Abwj.jpg" width="200px" >
+_
+<img src="https://i.imgur.com/dZk6bIB.jpg" width="200px" >
 <img src="https://i.imgur.com/Am7Abwj.jpg" width="200px" >
 
 ## 新增到常用
