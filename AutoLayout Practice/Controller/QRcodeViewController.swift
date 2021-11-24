@@ -61,7 +61,7 @@ class QRcodeViewController: UIViewController,UINavigationControllerDelegate,UIIm
     }
     
    private func uploadImage(_ uiImage:UIImage){
-        let headers:HTTPHeaders = ["Authorization":"Client-ID fa27789397234c4",]
+        let headers:HTTPHeaders = ["Authorization":"Client-ID kjsdfdskfjdsfieuf",]
         AF.upload(multipartFormData: {(data) in
             let imageData = uiImage.jpegData(compressionQuality: 0.9)
             data.append(imageData!,withName:"image")
