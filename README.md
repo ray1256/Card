@@ -9,12 +9,13 @@ _
 _
 <img src="https://i.imgur.com/dZk6bIB.jpg" width="200px" >
 <img src="https://i.imgur.com/Am7Abwj.jpg" width="200px" >
+<img src="" width="200px" >
 
 ## 新增到常用
-<img src="https://i.imgur.com/befkJOw.png" width="200px" >
-
 ### 常用最會使用到的功能就是撥打電話
+<img src="https://i.imgur.com/oCfx9GP.png" width="200px" >
 <img src="https://i.imgur.com/duFqig0.png" width="200px" >
+<img src="https://i.imgur.com/0609jNV.gif" width="200px" >
 
 ## QRCode Generate
 ### 在相簿選擇圖片將圖片轉換成QRCode
