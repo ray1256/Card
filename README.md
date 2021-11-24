@@ -1,5 +1,6 @@
 # Card
 ## HomePage
+### 以上的名片皆為網路上擷取，如有侵權，收到通知後會立即撤下
 _ 
 <img src="https://i.imgur.com/3rviHq0.jpg" width="200px" >
 <img src="https://i.imgur.com/XgBji5L.jpg" width="200px" >
