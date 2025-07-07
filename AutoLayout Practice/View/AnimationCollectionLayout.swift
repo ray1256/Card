@@ -35,15 +35,16 @@ class AnimationCollectionLayout: UICollectionViewLayout {
         if collectionView == nil { return nil}
         
         let totalItemsCount = collectionView!.numberOfItems(inSection: 0)
-        let minVisibleIndex = max(0,Int(collectionView!.contentOffset.x) / Int(collectionView!.bounds.width))
-        
-        let maxVisibleIndex = min(totalItemsCount,minVisibleIndex + maxVisibleItem)
-        
-        let contentCenterX = collectionView!.contentOffset.x + collectionView!.bounds.width / 2
-        
-        let deltaOffset = Int(collectionView!.contentOffset.x) % Int(collectionView!.bounds.width)
-        
-        let percentageDeltaOffset = CGFloat(deltaOffset) / collectionView!.bounds.width
+        let pageWidth = collectionView!.bounds.width
+        let minVisibleIndex = max(0, Int(collectionView!.contentOffset.x / pageWidth))
+
+        let maxVisibleIndex = min(totalItemsCount, minVisibleIndex + maxVisibleItem)
+
+        let contentCenterX = collectionView!.contentOffset.x + pageWidth / 2
+
+        let deltaOffset = collectionView!.contentOffset.x - CGFloat(minVisibleIndex) * pageWidth
+
+        let percentageDeltaOffset = deltaOffset / pageWidth
         
         //print("CollectionView.contentOffset.x",collectionView!.contentOffset.x)
         //print("collectionView!.bounds.width",collectionView!.bounds.width)
@@ -55,8 +56,12 @@ class AnimationCollectionLayout: UICollectionViewLayout {
         
         var attributes = [UICollectionViewLayoutAttributes]()
         
-        for i in minVisibleIndex..<maxVisibleIndex{
-            let attribute = computeLayoutAttributesForItem(indexPath: IndexPath(item: i, section: 0), minVisibleIndex: minVisibleIndex, contentCenterX: contentCenterX, deltaOffset: CGFloat(deltaOffset), percentageDeltaOffset: percentageDeltaOffset)
+        for i in minVisibleIndex..<maxVisibleIndex {
+            let attribute = computeLayoutAttributesForItem(indexPath: IndexPath(item: i, section: 0),
+                                                         minVisibleIndex: minVisibleIndex,
+                                                         contentCenterX: contentCenterX,
+                                                         deltaOffset: deltaOffset,
+                                                         percentageDeltaOffset: percentageDeltaOffset)
             
             attributes.append(attribute)
         }
